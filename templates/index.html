@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% block content_title %}{% endblock %}
+<main class="articlelisting">
+
+{% for article in articles_page.object_list %}
+<article class="post">
+
+{{ article.content }}	
+</article>
+{% endfor %}
+</main>
+
+{% endblock content %}
