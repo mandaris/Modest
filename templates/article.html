@@ -12,5 +12,7 @@
 {% include "includes/article_header.html" %}
 {{ article.content }}
 </article>
+{% if DISQUS_SITENAME %}
+{% include "includes/disqus.html" %}
 {% endif %}
 {% endblock content%}
