@@ -4,16 +4,16 @@
 <a rel="external"
    title="{{ article.title|striptags }} «{{ SITENAME }}»"
    href="{{ article.link }}">
-   {{ article.title}}
+   {{ article.title }}
 </a>
 {% else %}
 <a rel="bookmark"
    title="{{ article.title|striptags }} «{{ SITENAME }}»"
    href="{{ article.url }}">
-   {{ article.title}}
+   {{ article.title }}
 </a>
 {% endif %}
 </h1>
-<p class="subtitle"><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time><span>Category: <a href="{{ SITEURL}}/{{ article.category.url }}">{{ article.category }}</a><br />
+<p class="subtitle"><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> <span>Category: <a href="{{ SITEURL}}/{{ article.category.url }}">{{ article.category }}</a><br />
 {% for tag in article.tags %} #<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}</span></p>
 </header>

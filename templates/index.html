@@ -3,11 +3,11 @@
 <main class="articlelisting">
 {% for article in articles_page.object_list %}
 <article class="post">
-{{ article.content }}	
+{% include "includes/article_header.html" %}
 {{ article.summary }}	
 </article>
 
 {% endfor %}
 </main>
-{% include "pagination.html" %}
+{% include "includes/pagination.html" %}
 {% endblock content %}

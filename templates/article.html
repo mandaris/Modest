@@ -9,7 +9,8 @@
 
 {% block content %}
 <article>
-{% include "article_header.html" %}
+{% include "includes/article_header.html" %}
 {{ article.content }}
 </article>
+{% endif %}
 {% endblock content%}
