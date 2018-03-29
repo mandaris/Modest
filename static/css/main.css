@@ -1,2 +1,6 @@
 /* Imports */
 @import url("pygment.css");
+
+header nav li {
+	display: inline;
+}
