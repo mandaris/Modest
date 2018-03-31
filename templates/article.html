@@ -8,7 +8,7 @@
 {% endblock OPEN_GRAPH_INFO %}
 
 {% block content %}
-<article>
+<article itemscope itemtype="https://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
 {{ article.content }}
 </article>

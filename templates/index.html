@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<main class="articlelisting">
+<main class="articlelisting" itemscope itemtype="https://schema.org/Blog">
 {% for article in articles_page.object_list %}
-<article class="post">
+<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
-{{ article.summary }}	
+<section itemprop="articleBody">
+{{ article.summary }}
+</section>
 </article>
 
 {% endfor %}
