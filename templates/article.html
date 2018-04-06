@@ -8,9 +8,11 @@
 {% endblock OPEN_GRAPH_INFO %}
 
 {% block content %}
-<article>
+<article itemscope itemtype="https://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
+<main itemprop="articleBody">
 {{ article.content }}
+</main>
 </article>
 {% if DISQUS_SITENAME %}
 {% include "includes/disqus.html" %}
