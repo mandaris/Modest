@@ -15,6 +15,4 @@
 </a>
 {% endif %}
 </h1>
-<p class="subtitle"><time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time> <span>Category: <a href="{{ SITEURL}}/{{ article.category.url }}">{{ article.category }}</a><br />
-{% for tag in article.tags %} #<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}</span></p>
 </header>
