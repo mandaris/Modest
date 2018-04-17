@@ -2,5 +2,9 @@
 @import url("pygment.css");
 
 header nav li {
-	display: inline;
+  display: inline;
+}
+
+figure {
+  width: 100%;
 }
