@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 <meta name="author" content="{{ AUTHOR }}" />
+<meta name="generator" content="Pelican" />
+<meta property="site_name" content="MandarisMoore.com" />
 
 <base href="{{ SITEURL }}" />
 <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
@@ -27,10 +29,11 @@
 
 {% block OPEN_GRAPH_INFO %}
 <!-- OpenGraph Info -->
-<meta property="og:title" content="{{ SITENAME }}"/>
-<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{ SITENAME }}" />
+<meta property="og:type" content="website" />
 <meta property="og:description" content="{{ SITE_DESCRIPTION }}"/>
-<meta property="og:url" content="{{ SITEURL }}"/>
+<meta property="og:url" content="{{ SITEURL }}" />
+<meta property="og:image" content="/favicon.png" />
 {% endblock OPEN_GRAPH_INFO %}
 
 {% endblock headers %}
