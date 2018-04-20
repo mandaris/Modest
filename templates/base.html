@@ -42,12 +42,14 @@
 <header itemscope itemtype="https://schema.org/WPHeader">
 <h1 class="websitetitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
 <nav class="navmenu" id="navmenu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<ul>
   <li><a class="navitemlink" href="{{ SITEURL }}/archives.html">Archive</a></li>
   {% if DISPLAY_PAGES_ON_MENU %}
   {% for page in pages %}
   <li><a class="navitemlink" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
   {% endif %}
+</ul>
 </nav>
 </header>
 
