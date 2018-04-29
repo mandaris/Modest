@@ -13,3 +13,11 @@ figure {
 figure img {
 	width: inherit;
 }
+
+figure figcaption {
+	text-align: center;
+}
+
+.readmore {
+	text-align: right;
+}
