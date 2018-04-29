@@ -36,6 +36,16 @@
 <meta property="og:image" content="/favicon.png" />
 {% endblock OPEN_GRAPH_INFO %}
 
+{% if TWITTER_USERNAME %}
+<meta name="twitter:site" content="@{{ TWITTER_USERNAME }}" />
+<meta name="twitter:name" content="@{{ TWITTER_USERNAME }}" />
+<meta name="twitter:card" content="summary" />
+{% endif %}
+
+
+{%if FACEBOOK_PROFILE_URL %}
+<meta property="article:author" content="{{FACEBOOK_PROFILE_URL}}" />
+{% endif %}
 {% endblock headers %}
 </head>
 <body itemscope itemtype="https://schema.org/Blog">
