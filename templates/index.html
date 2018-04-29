@@ -7,8 +7,12 @@
 <section itemprop="description">
 {{ article.summary }}
 </section>
+<p class="readmore"><a rel="bookmark"
+   title="{{ article.title|striptags }} «{{ SITENAME }}»"
+   href="{{ article.url }}"
+   itemprop="url">Read More...</a></p>
 <footer>
-{% include "includes/index_article_footer.html" %}
+{% include "includes/article_footer.html" %}
 </footer>
 </article>
 

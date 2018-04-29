@@ -1,0 +1,3 @@
+<p><span>Category: <a href="{{ SITEURL}}/{{ article.category.url }}"><span itemprop="articleSection">{{ article.category }}</span></a> 
+   <time class="right-align" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time><br />
+{% for tag in article.tags %} #<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}</span> </p>
