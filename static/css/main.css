@@ -1,6 +1,10 @@
 /* Imports */
 @import url("pygment.css");
 
+header > h1 > a {
+	text-decoration: none;
+}
+
 header nav ul li {
   display: inline;
 }
@@ -12,7 +16,7 @@ figure {
 }
 
 figure img {
-  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -21,10 +25,26 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+@media screen and (min-width: 1000px) {
+	body {
+		width: 992px;
+	}
+}
+
+
 .readmore {
   text-align: right;
 }
 
 .rightside {
   float: right;
+}
+
+.websitetitle {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+header > nav {
+  margin-top: 0px;
 }
