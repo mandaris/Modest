@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
+{% block description %}{% if page.description %}
+<meta name="description" content="{{ page.description|striptags }}" />
+{% else %}
+<meta name="description" content="{{ page.summary|striptags }}" />
+{% endif %}
+{% endblock %}
 {% block content %}
 <main itemprop="articleBody">
 <h1 itemprop="headline">{{ page.title }}</h1>
