@@ -16,9 +16,9 @@
 {% block content %}
 <article itemscope itemtype="https://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
-<main itemprop="articleBody">
+<section class="arcticle-body" itemprop="articleBody">
 {{ article.content }}
-</main>
+</section>
 {% include "includes/article_footer.html" %}
 </article>
 {% if DISQUS_SITENAME %}
