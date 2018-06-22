@@ -14,7 +14,8 @@
 {% endblock OPEN_GRAPH_INFO %}
 
 {% block content %}
-<article itemscope itemtype="https://schema.org/BlogPosting">
+<article itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<meta itemprop="mainEntityOfPage" content="{{ article.url }}">
 {% include "includes/article_header.html" %}
 <section class="arcticle-body" itemprop="articleBody">
 {{ article.content }}
