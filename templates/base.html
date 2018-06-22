@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}"" prefix="og: http://ogp.me/ns#">
+<html lang="{{ DEFAULT_LANG }}" prefix="og: http://ogp.me/ns#" 
+       xmlns:og="http://ogp.me/ns#"
+       xmlns:article="http://ogp.me/ns/article#"
+       xmlns:blogPosting="http://ogp.me/ns/blogPosting#"
+       xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 {% block headers %}
 <meta charset="utf-8" />
@@ -33,7 +37,9 @@
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{ SITE_DESCRIPTION }}"/>
 <meta property="og:url" content="{{ SITEURL }}" />
+<meta property="og:locale" content="{{ DEFAULT_LANG }}" />
 <meta property="og:image" content="/favicon.png" />
+<meta property="og:image:alt" content="A person in a gear." />
 {% endblock OPEN_GRAPH_INFO %}
 
 {% if TWITTER_USERNAME %}
@@ -50,6 +56,7 @@
 {% endblock headers %}
 </head>
 <body itemscope itemtype="https://schema.org/Blog">
+<meta itemprop="description" content="{{ SITE_DESCRIPTION }}" />
 <header itemscope itemtype="https://schema.org/WPHeader">
 <h1 class="websitetitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
 <nav class="navmenu" id="navmenu" itemscope itemtype="https://schema.org/SiteNavigationElement">
@@ -68,7 +75,7 @@
 {% endblock content %}
 
 <footer itemscope itemtype="https://schema.org/WPFooter">
-  <p>All works created by <span itemprop="name">{{ AUTHOR }}</span></p>
+  <p>All works created by <span itemprop="author" itemscope itemtype=https://schema.org/Person><span itemprop="name">{{ AUTHOR }}</span></span>.</p>
   <p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
 </footer>
 </body>
