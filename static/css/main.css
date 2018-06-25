@@ -52,3 +52,7 @@ header > nav {
 a {
   color: #4fb0ae;
 }
+
+abbr {
+  text-decoration: underline dashed #4fb0ae;
+}
