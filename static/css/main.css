@@ -48,3 +48,7 @@ body {
 header > nav {
   margin-top: 0px;
 }
+
+a {
+  color: #4fb0ae;
+}
