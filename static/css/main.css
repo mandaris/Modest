@@ -56,3 +56,9 @@ a {
 abbr {
   text-decoration: underline dashed #4fb0ae;
 }
+
+.tag {
+  border: 1px solid;
+  border-radius: 7px;
+  padding: 3px;
+}
