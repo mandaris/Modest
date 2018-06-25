@@ -3,7 +3,7 @@
    <span class="rightside"><time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time></span><br />
 {% if article.tags %}
 <span itemprop="keywords">
-{% for tag in article.tags %} #<a rel="category tag" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %} 
+{% for tag in article.tags %} #<a class="tag" rel="category tag" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %} 
 </span>
 {% endif %}
 </p>
