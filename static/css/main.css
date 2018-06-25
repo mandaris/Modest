@@ -62,3 +62,7 @@ abbr {
   border-radius: 7px;
   padding: 3px;
 }
+
+.tag::before {
+  content: "#";
+}
