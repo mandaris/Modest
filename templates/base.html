@@ -50,8 +50,12 @@
 {% endif %}
 
 
-{%if FACEBOOK_PROFILE_URL %}
-<meta property="article:author" content="{{FACEBOOK_PROFILE_URL}}" />
+{% if FACEBOOK_PROFILE_URL %}
+<meta property="article:author" content="{{ FACEBOOK_PROFILE_URL }}" />
+{% endif %}
+
+{% if FACEBOOK_APPID %}
+<meta property="fb:app_id" content="{{ FACEBOOK_APPID }}" />
 {% endif %}
 {% endblock headers %}
 </head>
