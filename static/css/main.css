@@ -9,6 +9,11 @@ header nav ul li {
   display: inline;
 }
 
+header nav ul {
+  margin: 0px;
+  -webkit-padding-start: 1em;
+}
+
 figure {
   max-width: 100%;
   text-align: center;
