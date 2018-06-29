@@ -57,11 +57,19 @@ header > nav {
 }
 
 a {
-  color: #4fb0ae;
+  color: #1b5a53;
+}
+
+a:hover {
+  color: #2f7825;
+}
+
+a:visited {
+  color: #102346;
 }
 
 abbr {
-  text-decoration: underline dashed #4fb0ae;
+  text-decoration: underline dashed #1b5a53;
 }
 
 .tag {
