@@ -1,6 +1,6 @@
 
 <header class="post-header">
-<h1 itemprop="name headline"> {% if article.link %}
+<h2 itemprop="name headline"> {% if article.link %}
 <a rel="external"
    title="{{ article.title|striptags }} «{{ SITENAME }}»"
    href="{{ article.link }}">
@@ -14,5 +14,5 @@
    {{ article.title }}
 </a>
 {% endif %}
-</h1>
+</h2>
 </header>
