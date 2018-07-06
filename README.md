@@ -12,7 +12,12 @@ A simple Pelican theme that that attempts to integrate opengraph and schema.org 
 
 ### EXTRA_PATH_METADATA
 I use the following to make sure that all my icons are placed where I'm expecting.
-
+```python
+EXTRA_PATH_METADATA = {'extra/favicon.png': {'path': 'favicon.png'},
+                       'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},
+                       'extra/apple-touch-icon-precomposed.png': {'path': 'apple-touch-icon-precomposed.png'},
+                       'extra/favicon.ico': {'path': 'favicon.ico'},}
+```
 
 ## Pelican Plugins
 This theme relies on the [pelican-open_graph](https://github.com/whiskyechobravo/pelican-open_graph) plugin. There are other kinds out there but I've been using this one for years.
