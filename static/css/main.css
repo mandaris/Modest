@@ -9,6 +9,10 @@ header nav ul li {
   display: inline;
 }
 
+header h1 {
+  display: inline;
+}
+
 header nav ul {
   margin: 0px;
   -webkit-padding-start: 1em;
