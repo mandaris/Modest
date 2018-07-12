@@ -32,9 +32,13 @@ body {
   margin-right: auto;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 40.5em) {
 	body {
-		width: 900px;
+		width: 40em;
+	}
+
+	.navmenu {
+		display: inline;
 	}
 }
 
@@ -86,4 +90,17 @@ abbr {
 
 .articleFooterP {
 	line-height: 1.5em;
+}
+
+.baseFooter {
+	line-height: .5em;
+}
+
+article div hr {
+	width: 90%;
+	border-style: dashed;
+}
+
+hr {
+	border-color: #1b5A53;
 }
