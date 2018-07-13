@@ -16,6 +16,7 @@ header h1 {
 header nav ul {
   margin: 0px;
   -webkit-padding-start: 1em;
+  display: inline;
 }
 
 figure {
