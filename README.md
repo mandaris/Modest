@@ -30,13 +30,12 @@ I use this to make standalone images into figures. You can read about my set up 
 
 Link: https://github.com/jdittrich/figureAltCaption 
 
-### mdx_downheader
-I use this to downgrade the headers in the raw markdown that I write. Sure, I could just increase the headers as I write them but sometimes the text comes from different sources. You can read what I wrote about this [here](https://mandarismoore.com/2018/07/getting-mdx_downheader-to-work.html).
+### TOC
+[Python-Markdown](https://python-markdown.github.io) has a built in feature for making a [Table of Contents](https://python-markdown.github.io/extensions/toc/) and making sure that the text being generated has the correct heading levels. 
 
-Link: https://github.com/cprieto/mdx_downheader
 
 ### Excerpt from pelicanconfig.py
-This is what I have in my config file to control the markdown.
+This is what I have in my config file to control the markdown generation.
 
 ```python
 MARKDOWN = {
@@ -44,8 +43,8 @@ MARKDOWN = {
         'markdown.extensions.codehilite': {'css_class': 'highlight'},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
+        'markdown.extensions.toc': {'baseheader': '3', 'title': 'Table of Contents'}
         'figureAltCaption':{},
-        'downheader': {'levels': '2'},
     },
     'output_format': 'html5',
 }
