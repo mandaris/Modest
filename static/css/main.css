@@ -111,3 +111,9 @@ article div hr {
 hr {
 	border-color: #1b5A53;
 }
+
+video {
+  max-width: 90%
+  margin-right: auto;
+  margin-left: auto;
+}
