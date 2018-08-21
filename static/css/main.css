@@ -1,6 +1,10 @@
 /* Imports */
 @import url("pygment.css");
 
+:root {
+  --main-color: #1b5a53;
+}
+
 header > h1 > a {
 	text-decoration: none;
 }
@@ -68,7 +72,7 @@ header > nav {
 }
 
 a {
-  color: #1b5a53;
+  color: var(--main-color);
 }
 
 a:hover {
@@ -80,7 +84,7 @@ a:visited {
 }
 
 abbr {
-  text-decoration: underline dashed #1b5a53;
+  text-decoration: underline dashed var(--main-color);
 }
 
 .tag {
@@ -117,3 +121,4 @@ video {
   margin-right: auto;
   margin-left: auto;
 }
+
