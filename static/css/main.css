@@ -122,3 +122,40 @@ video {
   margin-left: auto;
 }
 
+/* Found this at https://codepen.io/iPawan/pen/emrPKP */
+
+blockquote {
+  display:block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  border-left-style: solid;
+  border-left-width: 15px;
+  border-left-color: var(--main-color);
+
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: var(--main-color);
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  /*font-family: Georgia, serif;*/
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+  
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
