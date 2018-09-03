@@ -42,11 +42,17 @@
 <meta property="og:image:alt" content="{{ FAVICON_ALT }}" />
 {% endblock OPEN_GRAPH_INFO %}
 
+{% if GITHUB_USERNAME %}
+<!-- IndieWeb sign-in -->
+<link rel="me" href="https://github.com/{{ GITHUB_USERNAME}}" />
+{% endif %}
+
 {% if TWITTER_USERNAME %}
 <!-- Twitter Specific Info -->
 <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}" />
 <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}" />
 <meta name="twitter:card" content="summary_large_image" />
+<link rel="me" href="https://twitter.com/{{ TWITTER_USERNAME}}" />
 {% endif %}
 
 
