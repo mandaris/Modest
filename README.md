@@ -4,11 +4,15 @@ A simple Pelican theme that that attempts to integrate opengraph and schema.org 
 ## Pelican Properties
 `TWITTER_USERNAME`: Used to toggle information that is twitter specific.
 
+`GITHUB_USERNAME`: Used to help with indeweb logins when twitter is not available
+
 `FACEBOOK_PROFILES_URL`: Used to toggle information that facebook might need.
 
 `FACEBOOK_APPID`: If you have an AppID from facebook.
 
 `DISQUS_SITENAME`: To allow chat on the site.
+
+`WEBMENTION`: To allow the site to have webmentions. Set to url of address (example: mandarismoore.com)
 
 ### EXTRA_PATH_METADATA
 I use the following to make sure that all my icons are placed where I'm expecting.

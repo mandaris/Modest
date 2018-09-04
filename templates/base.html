@@ -31,6 +31,12 @@
       rel="alternate" title="{{ SITENAME }} RSS Feed" />
 {% endif %}
 
+{% if WEBMENTIONS %}
+<!-- Enabling webmention functionality -->
+<link rel="pingback" href="https://webmention.io/{{ WEBMENTIONS }}/xmlrpc" />
+<link rel="webmention" href="https://webmention.io/{{ WEBMENTIONS }}/webmention" />
+{% endif %}
+
 {% block OPEN_GRAPH_INFO %}
 <!-- OpenGraph Info -->
 <meta property="og:title" content="{{ SITENAME }}" />
