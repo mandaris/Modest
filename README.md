@@ -12,7 +12,7 @@ A simple Pelican theme that that attempts to integrate opengraph and schema.org 
 
 `DISQUS_SITENAME`: To allow chat on the site.
 
-`WEBMENTION`: To allow the site to have webmentions. Set to url of address (example: mandarismoore.com)
+`WEBMENTIONS:`: To allow the site to have webmentions. Set to url of address (example: mandarismoore.com)
 
 ### EXTRA_PATH_METADATA
 I use the following to make sure that all my icons are placed where I'm expecting.
@@ -25,6 +25,11 @@ EXTRA_PATH_METADATA = {'extra/favicon.png': {'path': 'favicon.png'},
 
 ## Pelican Plugins
 This theme relies on the [pelican-open_graph](https://github.com/whiskyechobravo/pelican-open_graph) plugin. There are other kinds out there but I've been using this one for years.
+
+### Pelican JSON Feed
+A new version of RSS has come out that distributes the content as JSON instead of xml. You can read about the plugin on its [github page](https://github.com/andrewheiss/pelican_json_feed "Pelican plugin to add a JSON Feed file to your site.").
+
+I have it set to toggle on when `FEED_JSON` is defined so that it matches the other feeds.
 
 ## Recommended Python-Markdown Extensions
 This theme uses two markdown extensions to format the raw text into html. These need to be installed into your environment by downloading and then running the `python setup.py install` command.

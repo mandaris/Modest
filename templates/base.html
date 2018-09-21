@@ -30,6 +30,9 @@
 <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" 
       rel="alternate" title="{{ SITENAME }} RSS Feed" />
 {% endif %}
+{% if FEED_JSON %}
+<link href="{{ FEED_DOMAIN  }}/feeds/all.json" type="application/json" rel="alternate"  title="{{ SITENAME }} JSON Feed" />
+{% endif %}
 
 {% if WEBMENTIONS %}
 <!-- Enabling webmention functionality -->
