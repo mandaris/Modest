@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-<meta name="author" content="{{ AUTHOR }}" />
+<meta name="author" class="p-author h-card" content="{{ AUTHOR }}" />
 <meta name="generator" content="Pelican" />
 <meta property="site_name" content="MandarisMoore.com" />
 {% block description %}<meta name="description" content="{{ SITE_DESCRIPTION }}">{% endblock %}
@@ -53,7 +53,7 @@
 
 {% if GITHUB_USERNAME %}
 <!-- IndieWeb sign-in -->
-<link rel="me" href="https://github.com/{{ GITHUB_USERNAME}}" />
+<link rel="me" class="u-url" href="https://github.com/{{ GITHUB_USERNAME}}" />
 {% endif %}
 
 {% if TWITTER_USERNAME %}
@@ -61,7 +61,7 @@
 <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}" />
 <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="me" href="https://twitter.com/{{ TWITTER_USERNAME}}" />
+<link rel="me" class="u-url" href="https://twitter.com/{{ TWITTER_USERNAME}}" />
 {% endif %}
 
 
@@ -95,7 +95,7 @@
 {% endblock content %}
 
 <footer itemscope itemtype="https://schema.org/WPFooter" class="baseFooter">
-  <p>All works created by <span itemprop="author" itemscope itemtype=https://schema.org/Person><span class="h-card" itemprop="name">{{ AUTHOR }}</span></span>.</p>
+  <p>All works created by <span itemprop="author" itemscope itemtype=https://schema.org/Person><span class="p-author h-card" itemprop="name">{{ AUTHOR }}</span></span>.</p>
   <p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
 </footer>
 </body>
