@@ -72,6 +72,11 @@
 {% if FACEBOOK_APPID %}
 <meta property="fb:app_id" content="{{ FACEBOOK_APPID }}" />
 {% endif %}
+
+{% if MICROBLOG_USERNAME %}
+<link href="https://micro.blog/{{ MICROBLOG_USERNAME }}" rel="me" />
+{% endif %}
+
 {% endblock headers %}
 </head>
 <body itemscope itemtype="https://schema.org/Blog">
