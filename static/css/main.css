@@ -26,17 +26,20 @@ header nav ul {
 figure {
   max-width: 90%;
   text-align: center;
-  font-weight: bold;
   margin-left: auto;
   margin-right: auto;
 }
 
+figcaption {
+  font-style: italic;
+}
+
 figure img {
-  max-width: 100%;
+  max-width: inherit;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: system-ui, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   margin-left: auto;
@@ -131,7 +134,7 @@ blockquote {
   position: relative;
 
   border-left-style: solid;
-  border-left-width: 15px;
+  border-left-width: 10px;
   border-left-color: var(--main-color);
 
   border-right-style: solid;
