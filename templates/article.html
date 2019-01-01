@@ -14,10 +14,10 @@
 {% endblock OPEN_GRAPH_INFO %}
 
 {% block content %}
-<article class="h-entry e-content" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article class="h-entry" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 <meta itemprop="mainEntityOfPage" content="{{ article.url }}">
 {% include "includes/article_header.html" %}
-<section class="arcticle-body" itemprop="articleBody">
+<section class="arcticle-body e-content" itemprop="articleBody">
 {{ article.content }}
 </section>
 {% include "includes/article_footer.html" %}
