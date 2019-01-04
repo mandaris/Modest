@@ -4,9 +4,9 @@
 {% for article in articles_page.object_list %}
 <article class="h-entry post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
-<section class="e-content post-body" itemprop="articleBody">
+<div class="e-content post-body" itemprop="articleBody">
 {{ article.content }}
-</section>
+</div>
 <p class="readmore u-url"><a rel="bookmark"
    title="{{ article.title|striptags }} «{{ SITENAME }}»"
    href="{{ article.url }}"

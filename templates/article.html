@@ -17,9 +17,9 @@
 <article class="h-entry" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 <meta itemprop="mainEntityOfPage" content="{{ article.url }}">
 {% include "includes/article_header.html" %}
-<section class="arcticle-body e-content" itemprop="articleBody">
+<div class="arcticle-body e-content" itemprop="articleBody">
 {{ article.content }}
-</section>
+</div>
 {% include "includes/article_footer.html" %}
 </article>
 {% if DISQUS_SITENAME %}
