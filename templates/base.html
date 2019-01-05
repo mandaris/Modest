@@ -7,16 +7,17 @@
 <head>
 {% block headers %}
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 <meta name="author" class="p-author h-card" content="{{ AUTHOR }}" />
-<meta name="generator" content="Pelican" />
 <meta property="site_name" content="MandarisMoore.com" />
-{% block description %}<meta name="description" content="{{ SITE_DESCRIPTION }}">{% endblock %}
+{% block description %}
+<meta name="description" content="{{ SITE_DESCRIPTION }}" />
+{% endblock %}
 <base href="{{ SITEURL }}" />
+<meta name="generator" content="Pelican" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
-
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
@@ -31,15 +32,11 @@
       rel="alternate" title="{{ SITENAME }} RSS Feed" />
 {% endif %}
 {% if FEED_JSON %}
-<link href="{{ FEED_DOMAIN  }}/feeds/all.json" type="application/json" rel="alternate"  title="{{ SITENAME }} JSON Feed" />
+<link href="{{ FEED_DOMAIN  }}/feeds/all.json" type="application/json"
+      rel="alternate" title="{{ SITENAME }} JSON Feed" />
 {% endif %}
 
-{% if WEBMENTIONS %}
-<!-- Enabling webmention functionality -->
-<link rel="pingback" href="https://webmention.io/{{ WEBMENTIONS }}/xmlrpc" />
-<link rel="webmention" href="https://webmention.io/{{ WEBMENTIONS }}/webmention" />
-{% endif %}
-
+<!--- Other Social Media Tags (See README.md) --->
 {% block OPEN_GRAPH_INFO %}
 <!-- OpenGraph Info -->
 <meta property="og:title" content="{{ SITENAME }}" />
@@ -49,12 +46,23 @@
 <meta property="og:locale" content="{{ DEFAULT_LANG }}" />
 <meta property="og:image" content="{{ SITEURL }}/favicon.png" />
 <meta property="og:image:alt" content="{{ FAVICON_ALT }}" />
-{% endblock OPEN_GRAPH_INFO %}
+{% endblock OPEN_GRAPH_INFO -%}
+
+{% if WEBMENTIONS %}
+<!-- Enabling webmention functionality -->
+<link rel="pingback" href="https://webmention.io/{{ WEBMENTIONS }}/xmlrpc" />
+<link rel="webmention" href="https://webmention.io/{{ WEBMENTIONS }}/webmention" />
+{% endif -%}
+
+{% if MICROBLOG_USERNAME %}
+<!-- Micro.blog User Name -->
+<link href="https://micro.blog/{{ MICROBLOG_USERNAME }}" rel="me" />
+{% endif -%}
 
 {% if GITHUB_USERNAME %}
 <!-- IndieWeb sign-in -->
 <link rel="me" class="u-url" href="https://github.com/{{ GITHUB_USERNAME}}" />
-{% endif %}
+{% endif -%}
 
 {% if TWITTER_USERNAME %}
 <!-- Twitter Specific Info -->
@@ -62,23 +70,21 @@
 <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="me" class="u-url" href="https://twitter.com/{{ TWITTER_USERNAME}}" />
-{% endif %}
-
+{% endif -%}
 
 {% if FACEBOOK_PROFILE_URL %}
+<!-- FACEBOOK Profile URL -->
 <meta property="article:author" content="{{ FACEBOOK_PROFILE_URL }}" />
-{% endif %}
+{% endif -%}
 
 {% if FACEBOOK_APPID %}
+<!-- FACEBOOK APP ID -->
 <meta property="fb:app_id" content="{{ FACEBOOK_APPID }}" />
-{% endif %}
-
-{% if MICROBLOG_USERNAME %}
-<link href="https://micro.blog/{{ MICROBLOG_USERNAME }}" rel="me" />
-{% endif %}
+{% endif -%}
 
 {% endblock headers %}
 </head>
+
 <body itemscope itemtype="https://schema.org/Blog">
 <meta itemprop="description" content="{{ SITE_DESCRIPTION }}" />
 <header>
