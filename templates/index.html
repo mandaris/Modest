@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<main class="articlelisting main-content">
+<main class="articlelisting container">
 {% for article in articles_page.object_list %}
-<article class="h-entry post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post hentry h-entry content" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
 <div class="e-content post-body" itemprop="articleBody">
 {{ article.content }}
