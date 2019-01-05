@@ -12,7 +12,13 @@ A simple Pelican theme that that attempts to integrate opengraph and schema.org 
 
 `DISQUS_SITENAME`: To allow chat on the site.
 
-`WEBMENTIONS:`: To allow the site to have webmentions. Set to url of address (example: mandarismoore.com)
+`GITHUB_USERNAME`: To allow for Github authentication.
+
+`OPEN_GRAPH_INFO`: To allow [OpenGraph](http://opengraphprotocol.org "The Open Graph protocol enables any web page to become a rich object in a social graph.") information.
+
+`WEBMENTIONS:`: To allow the site to have [webmentions](https://webmention.io "Webmention.io is a hosted service created to easily receive webmentions on any web page."). Set to url of address (example: mandarismoore.com)
+
+`MICROBLOG_USERNAME`: To allow you to validate your [Micro.blog](https://micro.blog "Micro.blog is a blog hosting platform with a safe community for microblogs.") account.
 
 ### EXTRA_PATH_METADATA
 I use the following to make sure that all my icons are placed where I'm expecting.
