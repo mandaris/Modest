@@ -42,13 +42,15 @@ body {
   font-family: system-ui, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 @media screen and (min-width: 40.5em) {
 	body {
 		width: 40em;
+    margin-left: auto;
+    margin-right: auto;
 	}
 
 	.navmenu {
