@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}" prefix="og: http://ogp.me/ns#" 
+<html lang="{{ DEFAULT_LANG }}" prefix="og: http://ogp.me/ns#"
        xmlns:og="http://ogp.me/ns#"
        xmlns:article="http://ogp.me/ns/article#"
        xmlns:blogPosting="http://ogp.me/ns/blogPosting#"
@@ -29,7 +29,7 @@
       rel="alternate" title="{{ SITENAME }} ALL Atom Feed" />
 {% endif %}
 {% if FEED_RSS %}
-<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" 
+<link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml"
       rel="alternate" title="{{ SITENAME }} RSS Feed" />
 {% endif %}
 {% if FEED_JSON %}
@@ -88,7 +88,7 @@
 
 <body itemscope itemtype="https://schema.org/Blog">
 <meta itemprop="description" content="{{ SITE_DESCRIPTION }}" />
-<header>
+<header role="banner">
 <h1 class="websitetitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
 <nav class="navmenu" id="navmenu" itemscope itemtype="https://schema.org/SiteNavigationElement">
 <ul>
@@ -106,7 +106,7 @@
 {% block content %}
 {% endblock content %}
 
-<footer itemscope itemtype="https://schema.org/WPFooter" class="baseFooter">
+<footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" class="baseFooter">
   <p>All works created by <span itemprop="author" itemscope itemtype=https://schema.org/Person><span class="p-author h-card" itemprop="name">{{ AUTHOR }}</span></span>.</p>
   <p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
 </footer>
