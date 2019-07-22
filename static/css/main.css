@@ -165,3 +165,17 @@ blockquote::after {
   /*Reset to make sure*/
   content: "";
 }
+
+dl {
+  display: grid;
+  grid-template-columns: 2;
+}
+
+dl dt {
+  color: var(--main-color);
+  grid-column: 1;
+}
+
+dl dd {
+  grid-column: 2;
+}
