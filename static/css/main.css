@@ -137,7 +137,7 @@ blockquote {
   position: relative;
 
   border-left-style: solid;
-  border-left-width: 10px;
+  border-left-width: 7px;
   border-left-color: var(--main-color);
 
   border-right-style: solid;
@@ -150,7 +150,7 @@ blockquote::before{
 
   /*Font*/
   /*font-family: Georgia, serif;*/
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   color: #999;
 
@@ -161,7 +161,7 @@ blockquote::before{
 
 }
 
-blockquote::after{
+blockquote::after {
   /*Reset to make sure*/
   content: "";
 }
