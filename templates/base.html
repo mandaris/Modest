@@ -106,9 +106,9 @@
   </li>
   {% if DISPLAY_PAGES_ON_MENU %}
   {% for page in pages %}
-  <li><a class="navitemlink" href="{{ SITEURL }}/{{ page.url }}">
-     {{ page.title }}
-  </a></li>
+  <li>
+    <a class="navitemlink" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+  </li>
   {% endfor %}
   {% endif %}
 </ul>
