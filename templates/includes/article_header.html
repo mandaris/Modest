@@ -17,7 +17,11 @@
       title="{{ article.title|striptags }} «{{ SITENAME }}»"
       href="{{ article.url }}"
       itemprop="url">
+      {% if article.title %}
       {{ article.title }}
+      {% else %}
+      MicroPost: {{ article.date }}
+      {% endif %}
     </a>
   {% endif %}
   </h2>
