@@ -1,10 +1,39 @@
-<p class="articleFooterP">Category: <a class="p-category" href="{{ SITEURL}}/{{ article.category.url }}">
-	<span itemprop="articleSection">{{ article.category }}</span></a> 
-   <span class="rightside"><time class="dt-published" datetime="{{ article.date.isoformat() }}" itemprop="dateCreated datePublished pubdate">{{ article.locale_date }}</time></span><br />
-{% if article.tags %}
-<span itemprop="keywords">
-{% for tag in article.tags %}<a class="tag" rel="category tag" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %} 
-</span>
+<p class="articleFooterP">Category:
+	<a class="p-category" href="{{ SITEURL}}/{{ article.category.url }}">
+    <span itemprop="articleSection">{{ article.category }}</span>
+  </a>
+  <span class="rightside">
+    <time
+      class="dt-published"
+      datetime="{{ article.date.isoformat() }}"
+      itemprop="dateCreated datePublished pubdate">
+        {{ article.locale_date }}
+    </time>
+  </span>
+  <br />
+
+{%- if article.tags %}
+  <span itemprop="keywords">
+    {% for tag in article.tags %}
+      <a
+        class="tag"
+        rel="category tag"
+        href="{{ SITEURL }}/{{ tag.url }}">
+          {{ tag }}
+      </a>
+    {% endfor %}
+  </span>
+{% endif %}
+
+{%- if article.modified %}
+  <span class="rightside">Modified:
+  	<time
+      class="dt-updated"
+  	  datetime="{{ article.modified.isoformat() }}"
+  	  itemprop="dateModified">
+        {{ article.locale_modified }}
+      </time>
+  </span>
 {% endif %}
 </p>
 

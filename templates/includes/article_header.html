@@ -1,19 +1,28 @@
 
 <header class="post-header">
-<h2 itemprop="headline title p-name name" class="title p-name post-title"> {% if article.link %}
-<a rel="external"
-   title="{{ article.title|striptags }} «{{ SITENAME }}»"
-   href="{{ article.link }}">
-   {{ article.title }}
-</a>
-{% else %}
-<a rel="bookmark"
-   class="u-url"
-   title="{{ article.title|striptags }} «{{ SITENAME }}»"
-   href="{{ article.url }}"
-   itemprop="url">
-   {{ article.title }}
-</a>
-{% endif %}
-</h2>
+  <h2
+    itemprop="headline title p-name name"
+    class="title p-name post-title">
+      {% if article.link %}
+    <a
+      rel="external"
+      title="{{ article.title|striptags }} «{{ SITENAME }}»"
+      href="{{ article.link }}">
+      {{ article.title }}
+    </a>
+  {% else %}
+    <a
+      rel="bookmark"
+      class="u-url"
+      title="{{ article.title|striptags }} «{{ SITENAME }}»"
+      href="{{ article.url }}"
+      itemprop="url">
+      {% if article.title %}
+      {{ article.title }}
+      {% else %}
+      MicroPost: {{ article.date }}
+      {% endif %}
+    </a>
+  {% endif %}
+  </h2>
 </header>
