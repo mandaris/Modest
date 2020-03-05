@@ -92,10 +92,13 @@ abbr {
 
 .tag {
   border: 1px solid;
-  border-radius: 7px;
-  padding: 2px;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  padding: 0em .5em;
   text-decoration: none;
-  margin-right: .3em;
+  margin: .25em;
+  text-align: center;
 }
 
 .tag::before {
