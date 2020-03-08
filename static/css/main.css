@@ -152,7 +152,7 @@ blockquote {
   border-right-color: var(--main-color);
 }
 
-blockquote::before{
+blockquote::before {
   content: "\201C"; /*Unicode for Left Double Quote*/
 
   /*Font*/
@@ -186,4 +186,8 @@ dl dt {
 
 dl dd {
   grid-column: 2;
+}
+
+.hidden {
+  display: none;
 }
