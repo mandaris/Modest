@@ -6,8 +6,8 @@
     <time
       class="dt-published"
       datetime="{{ article.date.isoformat() }}"
-      itemprop="dateCreated datePublished">
-        {{ article.locale_date }}
+      itemprop="dateCreated datePublished pubdate">
+        {{ article.date.strftime("%B %d, %Y") }}
     </time>
   </span>
   <br />
@@ -31,7 +31,7 @@
       class="dt-updated"
   	  datetime="{{ article.modified.isoformat() }}"
   	  itemprop="dateModified">
-        {{ article.locale_modified }}
+        {{ article.date.strftime("%B %d, %Y") }}
       </time>
   </span>
 {% endif %}
