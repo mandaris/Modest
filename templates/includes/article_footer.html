@@ -6,7 +6,7 @@
     <time
       class="dt-published"
       datetime="{{ article.date.isoformat() }}"
-      itemprop="dateCreated datePublished pubdate">
+      itemprop="dateCreated datePublished">
         {{ article.date.strftime("%B %d, %Y") }}
     </time>
   </span>
@@ -37,3 +37,24 @@
 {% endif %}
 </p>
 
+{% if AUTHOR %}
+<details itemprop="author" itemscope itemtype="https://schema.org/Person" class="p-author h-card hidden">
+  <summary itemprop="name" class="p-name">{{ AUTHOR }}</summary>
+  {%- if AUTHOR_IMAGE %}
+  <img itemprop="image" class="u-photo"
+    src="{{ AUTHOR_IMAGE }}"
+    alt="Author's Profile." />
+  {% endif %}
+  {%- if AUTHOR_NOTE %}
+  <p class="p-note">{{ AUTHOR_NOTE }}</p>
+  {% endif %}
+  {%- if AUTHOR_URL %}
+  <p><a itemprop="url" class="u-url u-uid"
+    rel="me" href="{{ AUTHOR_URL }}"
+    title="Author Website.">
+    {{ AUTHOR }}</a></p>
+  {% endif %}
+
+
+</details>
+{% endif %}
