@@ -1,7 +1,9 @@
 # Modest
-A simple Pelican theme that that attempts to integrate opengraph and schema.org tags as well as having an easy to read experience.
+A simple Pelican theme that  attempts to integrate opengraph and schema.org tags as well as having an easy to read experience. It is designed with one author in mind.
 
-## Pelican Properties
+## Optional Properties
+These properties can be be used to improve meta data for the site.
+
 `TWITTER_USERNAME`: Used to toggle information that is twitter specific.
 
 `GITHUB_USERNAME`: Used to help with indeweb logins when twitter is not available
@@ -19,6 +21,12 @@ A simple Pelican theme that that attempts to integrate opengraph and schema.org 
 `WEBMENTIONS:`: To allow the site to have [webmentions](https://webmention.io "Webmention.io is a hosted service created to easily receive webmentions on any web page."). Set to url of address (example: mandarismoore.com)
 
 `MICROBLOG_USERNAME`: To allow you to validate your [Micro.blog](https://micro.blog "Micro.blog is a blog hosting platform with a safe community for microblogs.") account.
+
+`AUTHOR_IMAGE`: A picture of the author to use
+
+`AUTHOR_NOTE`: Information that the author wants to share
+
+`AUTHOR_URL`: URL for the author
 
 ### EXTRA_PATH_METADATA
 I use the following to make sure that all my icons are placed where I'm expecting.
