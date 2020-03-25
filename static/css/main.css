@@ -12,6 +12,10 @@ header > h1 > a {
 	text-decoration: none;
 }
 
+header > h1 > a:visited {
+  color: var(--main-color);
+}
+
 header nav ul li {
   display: inline;
 }
