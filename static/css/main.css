@@ -3,6 +3,9 @@
 
 :root {
   --main-color: #1b5a53;
+  --secondary-color: #5a1b22;
+  --tertiary-color: #5a531b;
+  --forth-color: #1b225a;
 }
 
 header > h1 > a {
@@ -85,11 +88,11 @@ a {
 }
 
 a:hover {
-  color: #2f7825;
+  color: var(--tertiary-color);
 }
 
 a:visited {
-  color: #102346;
+  color: var(--secondary-color);
 }
 
 abbr {
