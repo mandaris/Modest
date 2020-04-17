@@ -198,3 +198,7 @@ dl dd {
 .hidden {
   display: none;
 }
+
+.pagination {
+  text-align: center;
+}
