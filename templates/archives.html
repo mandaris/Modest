@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+<h1>Archives for {{ SITENAME }}</h1>
+
+<dl>
+{% for article in dates %}
+    <dt>{{ article.date.strftime("%B %d, %Y") }}</dt>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">
+    {% if article.title %}
+{{ article.title }}
+{% else %}
+MicroPost: {{ article.date.strftime("%I:%M %p") }}
+{% endif %}
+</a></dd>
+{% endfor %}
+</dl>
+</main>
+{% endblock %}
