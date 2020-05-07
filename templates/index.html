@@ -24,6 +24,17 @@
 </article>
 <hr />
 {% endfor %}
-</main>
+
+
 {% include "includes/pagination.html" %}
+
+{% if false %}
+<aside class="sidebar">
+<script type="text/javascript" src="https://micro.blog/sidebar.js?username={{ MICROBLOG_USERNAME }}"></script>
+</aside>
+{% endif -%}
+
+</main>
+
+
 {% endblock content %}

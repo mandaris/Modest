@@ -23,8 +23,10 @@
     {{ article.content }}
   </div>
   {% include "includes/article_footer.html" %}
-</article>
+
 {% if DISQUS_SITENAME %}
 {% include "includes/disqus.html" %}
 {% endif %}
+</article>
+
 {% endblock content%}
