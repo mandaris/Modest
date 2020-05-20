@@ -56,7 +56,7 @@ body {
   margin-left: 1em;
   margin-right: 1em;
 }
-/*
+
 @media screen and (min-width: 40.5em) {
 	body {
 		width: 40em;
@@ -68,7 +68,7 @@ body {
 		display: inline;
 	}
 }
-*/
+
 
 .readmore {
   text-align: right;
@@ -203,13 +203,20 @@ dl dd {
   text-align: center;
 }
 
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-width: 3;
+  border-color: grey;
 }
 
+/*
 .content {
   grid-column: 1;
+  border-color: blue;
+  border-style: inset;
+  border-width: 2;
   
 }
 
@@ -220,3 +227,4 @@ dl dd {
   border-width: 1;
   border-color: red;
 }
+*/
