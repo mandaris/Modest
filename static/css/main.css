@@ -55,9 +55,20 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   margin-left: 1em;
   margin-right: 1em;
+
+  grid-template-areas:
+    "header header"
+    "content side"
+    "footer footer";
+
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 1em;
+
+  height: 100vh;
 }
 
-@media screen and (min-width: 40.5em) {
+/*@media screen and (min-width: 40.5em) {
 	body {
 		width: 40em;
     margin-left: auto;
@@ -67,7 +78,7 @@ body {
 	.navmenu {
 		display: inline;
 	}
-}
+}*/
 
 
 .readmore {
@@ -85,6 +96,7 @@ body {
 
 header > nav {
   margin-top: 0px;
+  grid-area: header;
 }
 
 a {
@@ -125,6 +137,7 @@ abbr {
 
 .baseFooter {
 	line-height: .5em;
+  grid-area: footer;
 }
 
 article div hr {
@@ -203,7 +216,7 @@ dl dd {
   text-align: center;
 }
 
-
+/*
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -211,13 +224,13 @@ dl dd {
   border-color: grey;
 }
 
-/*
+
 .content {
   grid-column: 1;
   border-color: blue;
   border-style: inset;
   border-width: 2;
-  
+
 }
 
 
@@ -228,3 +241,39 @@ dl dd {
   border-color: red;
 }
 */
+
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "content side";
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  /*border-width: 3; */
+  border-color: grey;
+}
+
+main {
+  grid-area: content;
+  display: flex;
+}
+
+
+.content {
+  /*grid-area: content;*/
+  border-color: blue;
+  border-style: inset;
+  border-width: 2;
+  display: flex;
+  /*float: left;*/
+
+}
+
+
+.sidebar {
+  grid-area: side;
+  border-style: dashed;
+  border-width: 1;
+  border-color: red;
+}

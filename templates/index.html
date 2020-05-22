@@ -2,12 +2,7 @@
 {% block content %}
 <main class="articlelisting container">
 
-	{% if MICROBLOG_USERNAME %}
-<aside class="sidebar">
-  <h1>Recent Micro.blog posts</h1>
-<script type="text/javascript" src="https://micro.blog/sidebar.js?username={{ MICROBLOG_USERNAME }}"></script>
-</aside>
-{% endif -%}
+
 
 {% for article in articles_page.object_list %}
 <article
@@ -34,11 +29,16 @@
 {% endfor %}
 
 
-{% include "includes/pagination.html" %}
-
-
 
 </main>
+
+
+{% if MICROBLOG_USERNAME %}
+<aside class="sidebar">
+  <h1>Recent Micro.blog posts</h1>
+<script type="text/javascript" src="https://micro.blog/sidebar.js?username={{ MICROBLOG_USERNAME }}"></script>
+</aside>
+{% endif -%}
 
 
 {% endblock content %}
