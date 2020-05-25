@@ -190,7 +190,7 @@ blockquote::before {
 
 blockquote::after {
   /*Reset to make sure*/
-  content: "";
+  conten  t: "";
 }
 
 dl {
