@@ -55,13 +55,13 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   margin-left: 1em;
   margin-right: 1em;
-
+  display:grid;
   grid-template-areas:
     "header header"
     "content side"
     "footer footer";
 
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 300px 200px;
   grid-template-rows: auto 1fr auto;
   grid-gap: 1em;
 
@@ -255,25 +255,36 @@ dl dd {
 }
 
 main {
-  grid-area: content;
-  display: flex;
+  /*grid-area: content;
+  display: flex;*/
 }
 
 
 .content {
-  /*grid-area: content;*/
+  grid-area: content;
   border-color: blue;
   border-style: inset;
   border-width: 2;
-  display: flex;
+  /*display: flex; */
   /*float: left;*/
 
 }
 
+header {
+  grid-area: header;
+}
 
 .sidebar {
   grid-area: side;
   border-style: dashed;
   border-width: 1;
   border-color: red;
+}
+
+.articlelisting {
+  display: grid;
+}
+
+.post {
+
 }

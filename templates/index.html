@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<main class="articlelisting container">
+<main class="articlelisting content">
 
 
 
 {% for article in articles_page.object_list %}
 <article
-  class="post hentry h-entry content"
+  class="post hentry h-entry"
   itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 {% include "includes/article_header.html" %}
 <div class="e-content post-body" itemprop="articleBody">
