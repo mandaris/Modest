@@ -1,0 +1,290 @@
+/* Imports */
+@import url("pygment.css");
+
+:root {
+  --main-color: #1b5a53;
+  --secondary-color: #5a1b22;
+  --tertiary-color: #5a531b;
+  --forth-color: #1b225a;
+}
+
+header > h1 > a {
+	text-decoration: none;
+}
+
+header > h1 > a:visited {
+  color: var(--main-color);
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header h1 {
+  display: inline;
+}
+
+header nav ul {
+  margin: 0px;
+  -webkit-padding-start: 1em;
+  display: inline;
+}
+
+figure {
+  max-width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+figure img {
+  max-width: inherit;
+}
+
+p img {
+  max-width: 90%;
+}
+
+body {
+  font-family: system-ui, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-left: 1em;
+  margin-right: 1em;
+  display:grid;
+  grid-template-areas:
+    "header header"
+    "content side"
+    "footer footer";
+
+  grid-template-columns: 300px 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 1em;
+
+  height: 100vh;
+}
+
+/*@media screen and (min-width: 40.5em) {
+	body {
+		width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	.navmenu {
+		display: inline;
+	}
+}*/
+
+
+.readmore {
+  text-align: right;
+}
+
+.rightside {
+  float: right;
+}
+
+.websitetitle {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+header > nav {
+  margin-top: 0px;
+  grid-area: header;
+}
+
+a {
+  color: var(--main-color);
+}
+
+a:hover {
+  color: var(--tertiary-color);
+}
+
+a:visited {
+  color: var(--secondary-color);
+}
+
+abbr {
+  text-decoration: underline dashed var(--main-color);
+  cursor: help;
+}
+
+.tag {
+  border: 1px solid;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  padding: 0em .5em;
+  text-decoration: none;
+  margin: .25em;
+  text-align: center;
+}
+
+.tag::before {
+  content: "#";
+}
+
+.articleFooterP {
+	line-height: 1.5em;
+}
+
+.baseFooter {
+	line-height: .5em;
+  grid-area: footer;
+}
+
+article div hr {
+	width: 90%;
+	border-style: dashed;
+}
+
+hr {
+	border-color: #1b5A53;
+}
+
+video {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Found this at https://codepen.io/iPawan/pen/emrPKP */
+
+blockquote {
+  display:block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  border-left-style: solid;
+  border-left-width: 7px;
+  border-left-color: var(--main-color);
+
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: var(--main-color);
+}
+
+blockquote::before {
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  /*font-family: Georgia, serif;*/
+  font-size: 50px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+
+}
+
+blockquote::after {
+  /*Reset to make sure*/
+  conten  t: "";
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 2;
+}
+
+dl dt {
+  color: var(--main-color);
+  grid-column: 1;
+  font-weight: bold;
+}
+
+dl dd {
+  grid-column: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+.pagination {
+  text-align: center;
+}
+
+/*
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-width: 3;
+  border-color: grey;
+}
+
+
+.content {
+  grid-column: 1;
+  border-color: blue;
+  border-style: inset;
+  border-width: 2;
+
+}
+
+
+.sidebar {
+  grid-column: 2;
+  border-style: dashed;
+  border-width: 1;
+  border-color: red;
+}
+*/
+
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "content side";
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  /*border-width: 3; */
+  border-color: grey;
+}
+
+main {
+  /*grid-area: content;
+  display: flex;*/
+}
+
+
+.content {
+  grid-area: content;
+  border-color: blue;
+  border-style: inset;
+  border-width: 2;
+  /*display: flex; */
+  /*float: left;*/
+
+}
+
+header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: side;
+  border-style: dashed;
+  border-width: 1;
+  border-color: red;
+}
+
+.articlelisting {
+  display: grid;
+}
+
+.post {
+
+}
