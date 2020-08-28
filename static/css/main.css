@@ -9,7 +9,7 @@
 }
 
 header > h1 > a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 header > h1 > a:visited {
@@ -48,37 +48,59 @@ figure img {
 p img {
   max-width: 90%;
 }
-
+@media screen and (min-width: 320px)
+{
 body {
   font-family: system-ui, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
-  margin-left: 1em;
-  margin-right: 1em;
+
+
+  margin-left: auto;
+  margin-right: auto;
+
   display:grid;
   grid-template-areas:
     "header header"
-    "content side"
+    "maincontent sidebar"
     "footer footer";
 
-  grid-template-columns: 300px 200px;
+
+
+  grid-template-columns: 50em 20em;
   grid-template-rows: auto 1fr auto;
+
+
+
+
   grid-gap: 1em;
 
   height: 100vh;
 }
 
-/*@media screen and (min-width: 40.5em) {
-	body {
-		width: 40em;
-    margin-left: auto;
-    margin-right: auto;
-	}
+}
 
-	.navmenu {
-		display: inline;
-	}
-}*/
+
+@media screen and (max-width: 320px) {
+  body {
+    display:grid;
+    grid-template-areas:
+    "header"
+    "maincontent"
+    "sidebar"
+    "footer";
+
+    grid-template-columns: 1fr;
+
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 300px;
+  }
+
+.navmenu {
+    display: inline;
+  }
+}
 
 
 .readmore {
@@ -132,21 +154,21 @@ abbr {
 }
 
 .articleFooterP {
-	line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 .baseFooter {
-	line-height: .5em;
+  line-height: .5em;
   grid-area: footer;
 }
 
 article div hr {
-	width: 90%;
-	border-style: dashed;
+  width: 90%;
+  border-style: dashed;
 }
 
 hr {
-	border-color: #1b5A53;
+  border-color: #1b5A53;
 }
 
 video {
@@ -255,30 +277,23 @@ dl dd {
 }
 
 main {
-  /*grid-area: content;
-  display: flex;*/
+  grid-area: maincontent;
+  /*display: flex;*/
 }
 
 
-.content {
-  grid-area: content;
-  border-color: blue;
-  border-style: inset;
-  border-width: 2;
-  /*display: flex; */
-  /*float: left;*/
 
-}
 
 header {
   grid-area: header;
+  align-items: center;
 }
 
 .sidebar {
-  grid-area: side;
-  border-style: dashed;
+  grid-area: sidebar;
+  /*border-style: dashed;
   border-width: 1;
-  border-color: red;
+  border-color: red;*/
 }
 
 .articlelisting {
@@ -287,4 +302,14 @@ header {
 
 .post {
 
+}
+
+
+footer {
+  grid-area: footer;
+  display: flex;
+}
+
+.microblog_post {
+  border-bottom: 1px solid var(--main-color);
 }
