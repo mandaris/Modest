@@ -9,7 +9,7 @@
 }
 
 header > h1 > a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 header > h1 > a:visited {
@@ -56,8 +56,8 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
 
 
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1em;
+  margin-right: 1em;
 
   display:grid;
   grid-template-areas:
@@ -82,8 +82,8 @@ body {
 
 
 @media screen and (max-width: 320px) {
-  body {
-    display:grid;
+	body {
+		display:grid;
     grid-template-areas:
     "header"
     "maincontent"
@@ -95,7 +95,7 @@ body {
     margin-left: 1em;
     margin-right: 1em;
     width: 300px;
-  }
+	}
 
 .navmenu {
     display: inline;
@@ -154,21 +154,21 @@ abbr {
 }
 
 .articleFooterP {
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 .baseFooter {
-  line-height: .5em;
+	line-height: .5em;
   grid-area: footer;
 }
 
 article div hr {
-  width: 90%;
-  border-style: dashed;
+	width: 90%;
+	border-style: dashed;
 }
 
 hr {
-  border-color: #1b5A53;
+	border-color: #1b5A53;
 }
 
 video {
