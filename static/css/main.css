@@ -47,7 +47,9 @@ figure img {
 
 p img {
   max-width: 90%;
+  height: auto;
 }
+
 @media screen and (min-width: 320px)
 {
 body {
